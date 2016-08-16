@@ -1,0 +1,16 @@
+.grid {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar {
+  margin: 0;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
