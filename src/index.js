@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import ProgressBar from './components/progress_bar';
 
-import App from './components/app';
-import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+class App extends Component {
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+  render () {
+
+    return (
+      <div>
+        <ProgressBar />
+      </div>
+    );
+  }
+}
+
+
+ReactDOM.render(<App />, document.querySelector('.container'));
