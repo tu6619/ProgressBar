@@ -54,16 +54,16 @@ class Bar extends Component {
                 label={`£${this.state.donations}`}
                 />
               <div className='donations-left'>
-                <Panel>{this.targetReached()}</Panel>
+                <Panel bsStyle='info'>{this.targetReached()}</Panel>
               </div>
             </Col>
           </div>
         </div>
         <div className='button-group'>
           <ButtonGroup justified>
-            <Button bsSize='large' href='#' onClick={this.donateOnePound.bind(this)} disabled={this.state.donations >= 100 ? true : false}>Donate £1</Button>
-            <Button bsSize='large' href='#' onClick={this.donateFivePounds.bind(this)} disabled={this.state.donations >= 100 ? true : false}>Donate £5</Button>
-            <Button bsSize='large' href='#' onClick={this.donateTenPounds.bind(this)} disabled={this.state.donations >= 100 ? true : false}>Donate £10</Button>
+            <Button bsSize='large' bsStyle='success' href='#' onClick={this.donateOnePound.bind(this)} disabled={this.state.donations >= 100 ? true : false}>DONATE £1</Button>
+            <Button bsSize='large' bsStyle='success' href='#' onClick={this.donateFivePounds.bind(this)} disabled={this.state.donations >= 100 ? true : false}>DONATE £5</Button>
+            <Button bsSize='large' bsStyle='success' href='#' onClick={this.donateTenPounds.bind(this)} disabled={this.state.donations >= 100 ? true : false}>DONATE £10</Button>
           </ButtonGroup>
         </div>
       </div>
