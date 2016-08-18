@@ -32,3 +32,7 @@ To get the app up and running in a development environment:
 * React JS
 * React-bootstrap
 * CSS3
+
+## Links
+
+* [The component](https://fundraising-campaign.herokuapp.com/)
