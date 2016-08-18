@@ -1,23 +1,44 @@
 .grid {
-  height: 80vh;
+  height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 .bar {
   margin: 0;
+  float: left;
 }
 
 .button-group {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 8vh;
 }
 
 .target {
   width: 20%;
   float: right;
-  margin: auto;
-  padding-top: 6vh;
+  padding-top: 4vh;
+}
+
+.donations-left .panel-body {
+  padding-bottom: 6vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.donations-left h3 {
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  padding-top: 8vh;
+}
+
+.header h1 {
+  text-align: center;
 }
