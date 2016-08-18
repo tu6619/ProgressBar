@@ -5,7 +5,7 @@ const Target = () => {
 
   return (
     <Panel bsStyle='info'>
-      <span className='panel-text'>TARGET: £100</span>
+      <span className='panel-text'>TARGET: &pound;100</span>
     </Panel>
   );
 };

@@ -4,7 +4,8 @@
   "description": "A simple fundraiser meter component",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "node node_modules/webpack/bin/webpack.js && node static-server.js"
   },
   "devDependencies": {
     "babel-core": "^6.2.1",
@@ -16,6 +17,8 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "hapi": "^14.2.0",
+    "inert": "^4.0.1",
     "react": "^0.14.3",
     "react-bootstrap": "^0.30.2",
     "react-dom": "^0.14.3"
