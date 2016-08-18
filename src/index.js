@@ -3,6 +3,7 @@ import { Col } from 'react-bootstrap';
 import ReactDOM from 'react-dom';
 import ProgressBar from './components/progress_bar';
 import Target from './components/target';
+import Header from './components/header';
 
 
 class App extends Component {
@@ -18,10 +19,13 @@ class App extends Component {
 
     return (
       <div>
-        <div className='target'>
-          <Target />
+        <div className='header'>
+          <Header />
         </div>
         <div className='bar'>
+          <div className='target'>
+            <Target />
+          </div>
           <ProgressBar />
         </div>
       </div>
