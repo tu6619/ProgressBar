@@ -14,3 +14,10 @@
   align-items: center;
   justify-content: center;
 }
+
+.target {
+  width: 20%;
+  float: right;
+  margin: auto;
+  padding-top: 6vh;
+}
