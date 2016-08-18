@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, ProgressBar, Button, ButtonGroup } from 'react-bootstrap';
+import { Col, ProgressBar, Panel, Button, ButtonGroup } from 'react-bootstrap';
 
 class Bar extends Component {
 
@@ -18,13 +18,6 @@ class Bar extends Component {
     });
   };
 
-  donateTwoPounds() {
-    let now = this.state.donations
-    this.setState({
-      donations: now + 2
-    });
-  };
-
   donateFivePounds() {
     let now = this.state.donations
     this.setState({
@@ -32,30 +25,45 @@ class Bar extends Component {
     });
   };
 
+  donateTenPounds() {
+    let now = this.state.donations
+    this.setState({
+      donations: now + 10
+    });
+  };
+
+  targetReached() {
+    let moneyLeft = 100 - this.state.donations;
+    if (moneyLeft > 0) {
+      return <h3>You need £{moneyLeft} more to reach your target.</h3>
+    } else {
+      return <h3>Target reached!</h3>
+    }
+  }
+
   render() {
 
     return (
       <div>
         <div>
           <div className='grid'>
-            <Col xs={1} sm={1} md={1} lg={1}>
-            </Col>
             <Col xs={12} sm={12} md={12} lg={12}>
               <ProgressBar
                 active
                 now={this.state.donations}
-                label={`${this.state.donations}%`}
+                label={`£${this.state.donations}`}
                 />
-            </Col>
-            <Col xs={1} sm={1} md={1} lg={1}>
+              <div className='donations-left'>
+                <Panel>{this.targetReached()}</Panel>
+              </div>
             </Col>
           </div>
         </div>
         <div className='button-group'>
           <ButtonGroup justified>
             <Button bsSize='large' href='#' onClick={this.donateOnePound.bind(this)} disabled={this.state.donations >= 100 ? true : false}>Donate £1</Button>
-            <Button bsSize='large' href='#' onClick={this.donateTwoPounds.bind(this)} disabled={this.state.donations >= 100 ? true : false}>Donate £2</Button>
             <Button bsSize='large' href='#' onClick={this.donateFivePounds.bind(this)} disabled={this.state.donations >= 100 ? true : false}>Donate £5</Button>
+            <Button bsSize='large' href='#' onClick={this.donateTenPounds.bind(this)} disabled={this.state.donations >= 100 ? true : false}>Donate £10</Button>
           </ButtonGroup>
         </div>
       </div>
